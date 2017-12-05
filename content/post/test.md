@@ -14,3 +14,5 @@ date: 2017-12-04T21:22:01+09:00
 - [NetlifyでHugoで作った静的サイトをホスティングしてビルドを自動化する – Snaplog](https://blog.mismithportfolio.com/web/hugo-netlify-build)
 
 あとSSL対応も簡単だった。 Netlify すごい。
+
+ちなみに試しにテーマ「[Lunacy](https://github.com/christat/Lunacy)」を使ってみた。デフォルトのまま使うと日本語だとちょっと読みにくいとか、きになるところがちょいちょいあるので、調整なり自作なりしてみたい。
