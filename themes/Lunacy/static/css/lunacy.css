@@ -1,0 +1,248 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white !important;
+}
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  border-radius: 2px;
+  max-width: 100%;
+}
+
+.no-gutter {
+   padding: 0 !important;
+    margin: 0 !important;
+}
+
+.fullpage{
+    background-color: white;
+}
+
+.blog-head{
+    z-index: 1000;
+    background-image: url("../img/drive.gif");
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: left;
+}
+
+.highlight{
+    color: #CA506C;/*pale red*/
+}
+
+.blog-head.title{
+    font-size: 30px;
+}
+
+.blog-title{
+    font-size: 64px;
+    font-weight: 800;
+    color: black;
+}
+
+.blog-subtitle{
+    font-size: 20px;
+    color: #F0F0F0;
+    border-top: 1px solid darkgray;
+    padding-top: 10px;
+}
+
+.neon-font{
+    font-family: 'Monoton', cursive;
+}
+.title-font{
+    font-family: 'Helvetica', sans-serif;
+}
+
+.text-font{
+    font-family: 'Yantramanav', sans-serif;
+    transition: color 0.2s ease-in;
+}
+.text-left{
+    text-align: left;
+}
+.text-hover-gray:hover{
+    color:gray;
+}
+.descr-font{
+    font-weight: 500;
+    font-size: 18px;
+    color: dimgray;
+}
+.link-font{
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+
+}
+
+.link-style{
+    color: #CA506C;/*pale red*/
+    text-decoration: none;
+    transition: color 0.2s ease-in;
+}
+.link-style:hover{
+    text-decoration: none;
+    color: #e56171;
+}
+
+.arrow-translate>i{
+    display: inline-block;
+    transition: transform .3s ease-out;
+}
+.arrow-translate:hover>i{
+    transform: translateX(5px);
+}
+
+.arrow-translate-left>i{
+    display: inline-block;
+    transition: transform .3s ease-out;
+}
+.arrow-translate-left:hover>i{
+    transform: translateX(-5px);
+}
+
+.blog-body{
+    z-index: 1000;
+    min-height: 100%;
+}
+
+.blog-post-container{
+    padding-top: 3em;
+}
+
+.blog-post{
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+.blog-post-styling{
+    color: #5e5e5e;
+    font-family: 'Yantramanav', sans-serif;
+    text-align: justify;
+}
+
+.blog-post-styling > p, .blog-post-styling > ul > li {
+    font-size: 22px;
+}
+
+.blog-post-styling > h3 {
+    font-size: 24px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.blog-post-styling > * > a{
+    color: #CA506C;/*pale red*/
+    transition: transform .3s ease-out;
+}
+
+.blog-post-styling > * > a:hover {
+    text-decoration: none;
+    color: #e56171;
+}
+
+.blog-post-styling > p > * > a{
+    color: #CA506C;/*pale red*/
+    transition: transform .3s ease-out;
+}
+
+.blog-post-styling > p > * > a:hover {
+    text-decoration: none;
+    color: #e56171;
+}
+
+.fill{
+    background-color: darkgray;
+}
+.pagination{
+    display: block;
+}
+
+.btn-pagination{
+    font-size: 18px;
+    padding-bottom: 3em;
+}
+.btn-pagination-right{
+    float: right;
+}
+
+.wrap{
+    display: inline-block;
+}
+
+.div-border{
+    border-left: 2px solid #E2E3E4;/*border grey*/
+    padding-left: 20px;
+    font-family: 'Yantramanav', sans-serif;
+    color: dimgray;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.head-footer{
+    display: block;
+    color:darkgray;
+    font-size:12px;
+    font-weight: bold;
+    text-align:center;
+    padding-top:1em;
+}
+
+.mobile-navigation{
+    border-top: solid 1px lightgray;
+    padding-top: 1em;
+    font-family: 'Yantramanav', sans-serif;
+    text-align: center;
+}
+
+.cs-icon{
+    max-height: 15px;
+    max-width: 15px;
+    display: inline;
+    margin-top: 5px;
+    margin-right: 4px;
+    margin-left: 3px;
+}
+
+/*Responsive styles for desktop*/
+@media(min-width:767px) {
+    .blog-post-styling{
+        color: #5e5e5e;
+        font-family: 'Yantramanav', sans-serif;
+        text-align: justify;
+    }
+
+    .blog-post-styling > h3 {
+        font-size: 20px;
+        font-family: 'Helvetica', sans-serif;
+    }
+
+    .blog-post-styling > p, .blog-post-styling > ul > li {
+        font-size: 18px;
+    }
+
+    .blog-head{
+        position: fixed;
+        z-index: 1000;
+        height: 100vh;
+        background-image: url("../img/drive.gif");
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: left;
+    }
+
+    .blog-body{
+        z-index: 1000;
+        min-height: 100%;
+        float: right;
+        background-color: white;
+    }
+
+}
