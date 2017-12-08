@@ -1,4 +1,42 @@
-{{ partial "header" . }}
+{{ partial "head" . }}
+<body>
+    <div class="container-fluid no-gutter fullpage">
+        <!--Left container (desktop) -->
+        <header class="blog-head col-sm-4 no-gutter hidden-xs" style="position:fixed">
+            <!--Title and subsection-->
+            <div class="col-xs-10 col-xs-offset-1" style="padding-top:3em;">
+                <h1 class="blog-title neon-font hidden-xs"><a  class="link-style" href="{{ .Permalink }}">6z</a></h1>
+                <!--Subsection-->
+                <div class="col-xs-12 no-gutter">
+                    <p class="blog-subtitle text-font" style="padding-bottom:1em">Rock the Udon</p>
+                    <h4>
+                        <a class="link-style" href="{{ .Site.BaseURL }}">
+                            <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+                            Home
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <!--Footer-->
+            <div class="col-xs-12 text-font head-footer" style="position:absolute;bottom:1em;z-index:-99">
+                &copy; 2017 <span class="highlight">rokuzeudon</span><br>
+            </div>
+        </header>
+
+        <!--Top container (mobile) -->
+        <header class="blog-head col-xs-12 no-gutter visible-xs">
+            <!--Title and subsection-->
+            <div class="col-xs-10 col-xs-offset-1" style="padding-top:3em;">
+                <h1 class="blog-title neon-font visible-xs"><a  class="link-style" href="{{ .Permalink }}">6z</a></h1>
+                <!--Subsection-->
+                <div class="col-xs-12 no-gutter">
+                    <p class="blog-subtitle text-font" style="padding-bottom:1em">Rock the Udon</p>
+                </div>
+            </div>
+        </header>
+
+        <!--Right/Bottom container-->
+        <main class="blog-body col-xs-12 col-sm-8 col-sm-offset-4">
             <!--Blog post iterator-->
             <div class="blog-post-container col-xs-12 col-sm-10 col-sm-offset-1">
                 {{ range (.Paginator 5).Pages }}
@@ -37,4 +75,12 @@
                     </a>
                 </h4>
             </div>
-{{ partial "footer" . }}
+            <!--Footer-->
+            <div>
+                <div class="col-xs-12 text-font head-footer visible-xs">
+                    &copy; 2017 <span class="highlight">rokuzeudon</span><br>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
