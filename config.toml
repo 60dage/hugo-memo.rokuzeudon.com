@@ -1,7 +1,6 @@
 baseURL = "https://memo.rokuzeudon.com/"
 languageCode = "ja"
 title = "6z"
-theme = "Lunacy"
 
 [Params]
 description = "メモ書きブログです"
