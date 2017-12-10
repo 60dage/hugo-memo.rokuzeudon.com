@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>..s on 6z</title>
+    <link>https://memo.rokuzeudon.com/</link>
+    <description>Recent content in ..s on 6z</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 10 Dec 2017 21:22:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://memo.rokuzeudon.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoのカスタマイズが楽しくなってきた</title>
+      <link>https://memo.rokuzeudon.com/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/rokuzeudon/study/blog/6z/content/post/test2/</link>
+      <pubDate>Sun, 10 Dec 2017 21:22:01 +0900</pubDate>
+      
+      <guid>https://memo.rokuzeudon.com/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/rokuzeudon/study/blog/6z/content/post/test2/</guid>
+      <description>ついついHugoのカスタマイズに没頭してしまった。
+もともと使っていた Lunacy に対してあれやこれや書き加えていたら、もはや原型を留めなくなってしまった。
+ Sass 入れた header/footer など共通パーツをテンプレート化した Bootstrap をやめた Adobe Typekit 使った  そして、まだできてないけどやりたいこと。
+ シェアボタン設置 前後のページへの移動 カテゴリー・タグの表示 OGP周り マイクロインタラクション実装  そういえば、はてなブログのカスタマイズだとほぼCSSしか触らないので、こうしてHTML部分から書くのは初めてかもしれない。結構悩む。 あと、テーマのカスタマイズから記事の投稿・更新までこうしてAtomで全て完結できるのがかなり快適。ページ表示もかなり早い。さすが静的ページ。</description>
+    </item>
+    
+    <item>
+      <title>初めてのHugo</title>
+      <link>https://memo.rokuzeudon.com/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/rokuzeudon/study/blog/6z/content/post/test/</link>
+      <pubDate>Mon, 04 Dec 2017 21:22:01 +0900</pubDate>
+      
+      <guid>https://memo.rokuzeudon.com/%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9/rokuzeudon/study/blog/6z/content/post/test/</guid>
+      <description>これで本当に更新できるのかどうか、おそるおそる書いている。 WordBench京都で聞いた▲さんの発表の通り、 Hugo + Github + Netlify を試している。つまずくことなく導入できてびっくりした。参考にさせていただいた記事の皆様に感謝。
+ NetlifyでHugoのビルドを自動化する - Qiita NetlifyでHugoで作った静的サイトをホスティングしてビルドを自動化する – Snaplog  あとSSL対応も簡単だった。 Netlify すごいね。
+ちなみにテーマ「Lunacy」を使っている。日本語がちょっと読みにくいとか head が header になってるとか気になるところが多いので、時間あるときにテーマの調整なり自作なりしたい。</description>
+    </item>
+    
+  </channel>
+</rss>
