@@ -1,8 +1,15 @@
 baseURL = "https://memo.rokuzeudon.com/"
-languageCode = "ja"
+canonifyURLs = true
+buildDrafts = false
 title = "6z"
+languageCode = "ja"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [Params]
-description = "メモ書きブログです"
-twitter_account = "rokuzeudon"
-github_account = "rokuzeudon"
+  description = "@rokuzeudon のWebに関するメモブログです"
+  author = "rokuzeudon"
+  twitter_account = "rokuzeudon"
+  github_account = "rokuzeudon"

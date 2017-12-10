@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>6z</title>
-    <!--FONTS-->
-    <script src="https://use.typekit.net/mct0npf.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <!--CSS-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet">
+  <script src="https://use.typekit.net/mct0npf.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  {{ with .Title | default .Site.Title }}
+  <title>{{ . }}</title>
+  <meta property="og:title" content="{{ . }}" />
+  <meta name="twitter:title" content="{{ . }}" />
+  {{ end }}
+
+  {{ with .Description | default .Site.Params.subtitle }}
+  <meta name="description" content="{{ . }}">
+  <meta property="og:description" content="{{ . }}">
+  <meta name="twitter:description" content="{{ . | truncate 200 }}">
+  {{ end }}
+
+  <meta name="author" content="{{ .Site.Params.author }}"/>
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+
+  {{ with .Params.thumbnail }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{ end }}
+  <meta name="twitter:card" content="summary" />
+
+  {{ with .Site.Params.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+  {{ end }}
+
+  {{ if .IsPage }}
+  <meta property="og:type" content="article" />
+  {{ with .Site.Params.facebook }}
+  <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
+  {{ end }}
+  {{ else }}
+  <meta property="og:type" content="website" />
+  {{ end }}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="/">
+  <link href="{{ .Site.BaseURL }}/css/style.css" rel="stylesheet">
 </head>
