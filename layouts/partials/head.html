@@ -10,7 +10,7 @@
   {{ with .Description | default .Site.Params.subtitle }}
   <meta name="description" content="{{ . }}">
   <meta property="og:description" content="{{ . }}">
-  <meta name="twitter:description" content="{{ . | truncate 200 }}">
+  <meta name="twitter:description" content="{{ . }}">
   {{ end }}
 
   <meta name="author" content="{{ .Site.Params.author }}"/>
