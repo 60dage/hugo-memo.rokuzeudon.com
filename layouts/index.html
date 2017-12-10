@@ -9,8 +9,8 @@
           {{ range (.Paginator 5).Pages }}
           <!--Blog post-->
           <article class="blog-post">
-              <p>{{ .Title }}</p>
-              <p>{{ .Description | markdownify }}</p>
+              <p class="blog-post-title">{{ .Title }}</p>
+              <p class="blog-post-description">{{ .Description | markdownify }}</p>
               <time datetime="{{ .Date.Format "2006-01-2" }}" itemprop="datePublished">{{ .Date.Format "2006-01-2" }}</time>
               <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
           </article>

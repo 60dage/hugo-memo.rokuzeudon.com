@@ -7,7 +7,7 @@
   <main class="blog-body">
     <div class="blog-post-container">
       <article class="blog-post">
-        <h1>{{ .Title }}</h1>
+        <h1 class="blog-post-title">{{ .Title }}</h1>
         <time datetime="{{ .Date.Format "2006-01-2" }}" itemprop="datePublished">{{ .Date.Format "2006-01-2" }}</time>
         {{ .Content }}
       </article>
