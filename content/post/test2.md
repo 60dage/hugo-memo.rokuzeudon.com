@@ -6,7 +6,7 @@ description: 既存テーマをそのまま使うつもりだったのに、テ�
 
 ついついHugoのカスタマイズに没頭してしまった。
 
-もともと使っていた [Lunacy](https://github.com/christat/Lunacy) に対してあれやこれや書き加えていたら、もはや原型を留めなくなってしまった。
+もともと使っていた [Lunacy](https://github.com/christat/Lunacy) にあれやこれや書き加えていたら、もはや原型を留めなくなってしまった。
 
 - Sass 入れた
 - header/footer など共通パーツをテンプレート化した
