@@ -43,6 +43,9 @@ body {
   margin: 1.4em auto;
   max-width: 42rem;
 }
+.blog-post h1 {
+  font-size: 1.6em;
+}
 
 // 記事一覧
 .index .blog-post {
@@ -61,7 +64,8 @@ body {
     color: $color-txt-light;
   }
   p {
-    margin: .4em 0 0;
+    margin: .8em 0 0;
+    font-size: 90%;
   }
   .more{
     position: absolute;
@@ -90,6 +94,9 @@ body {
   }
   p {
     text-align: justify;
+  }
+  ul {
+    padding: 0 0 0 1.4em;
   }
 }
 

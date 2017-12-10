@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>..s on 6z</title>
+    <title>6z</title>
     <link>https://memo.rokuzeudon.com/</link>
-    <description>Recent content in ..s on 6z</description>
+    <description>Recent content on 6z</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 10 Dec 2017 21:22:01 +0900</lastBuildDate>
@@ -20,7 +20,8 @@
       <description>ついついHugoのカスタマイズに没頭してしまった。
 もともと使っていた Lunacy に対してあれやこれや書き加えていたら、もはや原型を留めなくなってしまった。
  Sass 入れた header/footer など共通パーツをテンプレート化した Bootstrap をやめた Adobe Typekit 使った  そして、まだできてないけどやりたいこと。
- シェアボタン設置 前後のページへの移動 カテゴリー・タグの表示 OGP周り マイクロインタラクション実装  そういえば、はてなブログのカスタマイズだとほぼCSSしか触らないので、こうしてHTML部分から書くのは初めてかもしれない。結構悩む。 あと、テーマのカスタマイズから記事の投稿・更新までこうしてAtomで全て完結できるのがかなり快適。ページ表示もかなり早い。さすが静的ページ。</description>
+ シェアボタン設置 前後のページへの移動 カテゴリー・タグの表示 OGP周り マイクロインタラクション実装  そういえば、はてなブログのカスタマイズだとほぼCSSしか触らないので、こうしてHTML部分から書くのは初めてかもしれない。結構悩む。
+あと、テーマのカスタマイズから記事の投稿・更新までこうしてAtomで全て完結できるのがかなり快適。ページ表示もかなり早い。さすが静的ページ。</description>
     </item>
     
     <item>
@@ -35,4 +36,5 @@
     </item>
     
   </channel>
+</rss>hannel>
 </rss>
