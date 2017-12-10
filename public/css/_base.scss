@@ -29,6 +29,13 @@ body {
   line-height: 1.4;
   font-family: alana, sans-serif;
   font-size: 4em;
+  a {
+  color: $color-key;
+  text-decoration: none;
+    &:hover {
+      color: darken($color-key, 15%);
+    }
+  }
 }
 .blog-subtitle {
   display: inline-block;
