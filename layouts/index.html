@@ -1,12 +1,15 @@
 {{ partial "head" . }}
 <body class="index">
-  {{ partial "header" . }}
+  <header class="blog-head">
+      <h1 class="blog-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></h1>
+      <p class="blog-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  </header>
   <main class="blog-body">
       <div class="blog-post-container">
           {{ range (.Paginator 5).Pages }}
           <!--Blog post-->
           <article class="blog-post">
-              <h1>{{ .Title }}</h1>
+              <p>{{ .Title }}</p>
               <p>{{ .Description | markdownify }}</p>
               <time datetime="{{ .Date.Format "2006-01-2" }}" itemprop="datePublished">{{ .Date.Format "2006-01-2" }}</time>
               <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
