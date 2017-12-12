@@ -12,14 +12,17 @@ body {
   font-feature-settings: "palt";
   font-size: 18px;
   color: $color-txt;
-  line-height: 1.8;
+  line-height: 2.2;
   letter-spacing: .08em;
+}
+li {
+  line-height: 1.8;
 }
 
 // ヘッダー
 .blog-head {
   margin: 1.4em auto;
-  max-width: 42rem;
+  max-width: 50rem;
   background-color: $color-bg-white;
 }
 .blog-title {
@@ -48,7 +51,7 @@ body {
 }
 .blog-post-container {
   margin: 1.4em auto;
-  max-width: 42rem;
+  max-width: 50rem;
 }
 .blog-post .blog-post-title {
   font-size: 1.6em;
@@ -108,7 +111,7 @@ body {
 // グローバルナビ
 .groval-nav{
   margin: 0 auto 1.4em;
-  max-width: 42rem;
+  max-width: 50rem;
 }
 .groval-nav ul {
   padding: 0;
@@ -132,7 +135,7 @@ body {
 .blog-footer {
   margin: 1.4em auto;
   padding: 0 1.4em;
-  max-width: 42rem;
+  max-width: 50rem;
   font-size: 80%;
   text-align: center;
   color: $color-txt-light;
