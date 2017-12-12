@@ -1,16 +1,16 @@
 {{ partial "head" . }}
 <body class="index">
-  <header class="blog-head">
-      <h1 class="blog-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></h1>
-      <p class="blog-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  <header class="c-header">
+      <h1 class="c-header-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></h1>
+      <p class="c-header-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
   </header>
-  <main class="blog-body">
-      <div class="blog-post-container">
+  <main class="c-body">
+      <div class="c-body-container">
           {{ range (.Paginator 5).Pages }}
           <!--Blog post-->
-          <article class="blog-post">
-              <h2 class="blog-post-title">{{ .Title }}</h2>
-              <p class="blog-post-description">{{ .Description | markdownify }}</p>
+          <article class="c-body-post">
+              <h2 class="c-body-post-title">{{ .Title }}</h2>
+              <p class="c-body-post-description">{{ .Description | markdownify }}</p>
               <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
               <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
           </article>

@@ -12,17 +12,20 @@ body {
   font-feature-settings: "palt";
   font-size: 18px;
   color: $color-txt;
-  line-height: 1.8;
+  line-height: 2.2;
   letter-spacing: .08em;
+}
+li {
+  line-height: 1.8;
 }
 
 // ヘッダー
-.blog-head {
+.c-header {
   margin: 1.4em auto;
-  max-width: 42rem;
+  max-width: 50rem;
   background-color: $color-bg-white;
 }
-.blog-title {
+.c-header-title {
   display: inline-block;
   margin: 0 0.3em 0 0;
   padding: 0 0 0 1.4rem;
@@ -37,33 +40,33 @@ body {
     }
   }
 }
-.blog-subtitle {
+.c-header-subtitle {
   display: inline-block;
 }
 
 // コンテンツ
-.blog-body {
+.c-body {
   padding: 1.4em 0;
   background-color: $color-bg-light;
 }
-.blog-post-container {
+.c-body-container {
   margin: 1.4em auto;
-  max-width: 42rem;
+  max-width: 50rem;
 }
-.blog-post .blog-post-title {
+.c-body-post .c-body-post-title {
   font-size: 1.6em;
   font-weight: normal;
 }
 
 // 記事一覧
-.index .blog-post {
+.index .c-body-post {
   position: relative;
   padding: 1.4em;
   line-height: 1.6;
   &:hover {
     background: $color-bg-white;
   }
-  .blog-post-title {
+  .c-body-post-title {
     margin: 0;
     line-height: 1.4;
   }
@@ -71,7 +74,7 @@ body {
     font-size: 80%;
     color: $color-txt-light;
   }
-  .blog-post-description {
+  .c-body-post-description {
     margin: .8em 0 0;
     font-size: 90%;
   }
@@ -91,7 +94,7 @@ body {
 }
 
 // 記事詳細
-.single .blog-post {
+.single .c-body-post {
   padding: 0 1.4em;
   h1 {
     line-height: 1.4;
@@ -105,34 +108,66 @@ body {
   }
 }
 
-// グローバルナビ
-.groval-nav{
-  margin: 0 auto 1.4em;
-  max-width: 42rem;
+// メニュー
+.c-menu{
+  margin: 5em auto 0;
+  max-width: 50rem;
 }
-.groval-nav ul {
+.c-menu-pager {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding: 0;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
   li {
+    position: relative;
+    width: 8em;
+    text-align: center;
     list-style: none;
     a {
       display: block;
       padding: .8em 1.4em;
-      height: 100%;
       text-decoration: none;
-      color: $color-key;
+      color: $color-txt-light;
       &:hover {
         color: darken($color-key, 15%);
         background: $color-bg-white;
       }
     }
   }
+  .c-menu-pager-newer a, .c-menu-pager-older a {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.45em;
+      width: .4em;
+      height: .4em;
+      border-top: 2px solid $color-key;
+      border-right: 2px solid $color-key;
+    }
+  }
+  .c-menu-pager-newer a {
+    padding: .8em 2.4em .8em 1.4em;
+    &::before {
+      right: 1em;
+      transform: rotate(45deg);
+    }
+  }
+  .c-menu-pager-older a {
+    padding: .8em 1.4em .8em 2.4em;
+    &::before {
+      left: 1em;
+      transform: rotate(-135deg);
+    }
+  }
 }
 
 // フッター
-.blog-footer {
+.c-footer {
   margin: 1.4em auto;
   padding: 0 1.4em;
-  max-width: 42rem;
+  max-width: 50rem;
   font-size: 80%;
   text-align: center;
   color: $color-txt-light;
