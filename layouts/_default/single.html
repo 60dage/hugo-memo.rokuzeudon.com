@@ -12,6 +12,23 @@
         {{ .Content }}
       </article>
     </div>
+    <nav class="c-menu">
+      <ul class="c-menu-pager">
+        <li class="c-menu-pager-newer">
+          {{ if .Prev }}
+          <a href="{{ .Prev.Permalink }}">Newer</a>
+          {{ else }}
+          {{ end }}
+        </li>
+        <li class="c-menu-pager-home"><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li class="c-menu-pager-older">
+          {{ if .Next }}
+          <a href="{{ .Next.Permalink }}">Older</a>
+          {{ else }}
+          {{ end }}
+        </li>
+      </ul>
+    </nav>
   </main>
   {{ partial "footer" . }}
 </body>
