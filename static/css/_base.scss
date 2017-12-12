@@ -108,25 +108,57 @@ li {
   }
 }
 
-// グローバルナビ
-.groval-nav{
-  margin: 0 auto 1.4em;
+// メニュー
+.c-menu{
+  margin: 5em auto 0;
   max-width: 50rem;
 }
-.groval-nav ul {
+.c-menu-pager {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   padding: 0;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
   li {
+    position: relative;
+    width: 8em;
+    text-align: center;
     list-style: none;
     a {
       display: block;
       padding: .8em 1.4em;
-      height: 100%;
       text-decoration: none;
-      color: $color-key;
+      color: $color-txt-light;
       &:hover {
         color: darken($color-key, 15%);
         background: $color-bg-white;
       }
+    }
+  }
+  .c-menu-pager-newer a, .c-menu-pager-older a {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.45em;
+      width: .4em;
+      height: .4em;
+      border-top: 2px solid $color-key;
+      border-right: 2px solid $color-key;
+    }
+  }
+  .c-menu-pager-newer a {
+    padding: .8em 2.4em .8em 1.4em;
+    &::before {
+      right: 1em;
+      transform: rotate(45deg);
+    }
+  }
+  .c-menu-pager-older a {
+    padding: .8em 1.4em .8em 2.4em;
+    &::before {
+      left: 1em;
+      transform: rotate(-135deg);
     }
   }
 }
