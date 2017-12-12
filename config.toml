@@ -3,6 +3,7 @@ canonifyURLs = true
 buildDrafts = false
 title = "6z"
 languageCode = "ja"
+googleAnalytics = "UA-56512489-5"
 
 [taxonomies]
   category = "categories"
