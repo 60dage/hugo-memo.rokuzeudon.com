@@ -1,0 +1,18 @@
+{{ partial "head" . }}
+<body class="single">
+  <header class="blog-head">
+      <p class="blog-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
+      <p class="blog-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  </header>
+  <main class="blog-body">
+    <div class="blog-post-container">
+      <article class="blog-post">
+        <h1 id="title">404 Not Found</h1>
+        <p>ページが見つかりませんでした。</p>
+        <p><a href="{{ .Site.BaseURL }}">Home</a>へ戻る</p>
+      </article>
+      {{ partial "nav" . }}
+    </div>
+  </main>
+  {{ partial "footer" . }}
+</body>
