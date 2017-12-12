@@ -1,13 +1,13 @@
 {{ partial "head" . }}
 <body class="single">
-  <header class="blog-head">
-      <p class="blog-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
-      <p class="blog-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  <header class="c-header">
+      <p class="c-header-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
+      <p class="c-header-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
   </header>
-  <main class="blog-body">
-    <div class="blog-post-container">
-      <article class="blog-post">
-        <h1 class="blog-post-title">{{ .Title }}</h1>
+  <main class="c-body">
+    <div class="c-body-container">
+      <article class="c-body-post">
+        <h1 class="c-body-post-title">{{ .Title }}</h1>
         <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
         {{ .Content }}
       </article>

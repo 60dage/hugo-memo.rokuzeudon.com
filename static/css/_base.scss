@@ -20,12 +20,12 @@ li {
 }
 
 // ヘッダー
-.blog-head {
+.c-header {
   margin: 1.4em auto;
   max-width: 50rem;
   background-color: $color-bg-white;
 }
-.blog-title {
+.c-header-title {
   display: inline-block;
   margin: 0 0.3em 0 0;
   padding: 0 0 0 1.4rem;
@@ -40,33 +40,33 @@ li {
     }
   }
 }
-.blog-subtitle {
+.c-header-subtitle {
   display: inline-block;
 }
 
 // コンテンツ
-.blog-body {
+.c-body {
   padding: 1.4em 0;
   background-color: $color-bg-light;
 }
-.blog-post-container {
+.c-body-container {
   margin: 1.4em auto;
   max-width: 50rem;
 }
-.blog-post .blog-post-title {
+.c-body-post .c-body-post-title {
   font-size: 1.6em;
   font-weight: normal;
 }
 
 // 記事一覧
-.index .blog-post {
+.index .c-body-post {
   position: relative;
   padding: 1.4em;
   line-height: 1.6;
   &:hover {
     background: $color-bg-white;
   }
-  .blog-post-title {
+  .c-body-post-title {
     margin: 0;
     line-height: 1.4;
   }
@@ -74,7 +74,7 @@ li {
     font-size: 80%;
     color: $color-txt-light;
   }
-  .blog-post-description {
+  .c-body-post-description {
     margin: .8em 0 0;
     font-size: 90%;
   }
@@ -94,7 +94,7 @@ li {
 }
 
 // 記事詳細
-.single .blog-post {
+.single .c-body-post {
   padding: 0 1.4em;
   h1 {
     line-height: 1.4;
@@ -164,7 +164,7 @@ li {
 }
 
 // フッター
-.blog-footer {
+.c-footer {
   margin: 1.4em auto;
   padding: 0 1.4em;
   max-width: 50rem;
