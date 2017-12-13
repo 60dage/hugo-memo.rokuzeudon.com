@@ -16,17 +16,19 @@
           </article>
           {{ end }}
           <!--Pagination-->
-          <nav class="pager">
-              <div>
-                  {{ if .Paginator.HasPrev }}
-                  <a class="link-style btn-pagination" href="{{ .Paginator.Prev.URL }}">過去の記事へ</a>
-                  {{ end }}
-              </div>
-              <div>
-                  {{ if .Paginator.HasNext }}
-                  <a class="link-style btn-pagination" href="{{ .Paginator.Next.URL }}">新しい記事へ</a>
-                  {{ end }}
-              </div>
+          <nav class="c-menu">
+            <ul class="c-menu-pager">
+              <li class="c-menu-pager-newer">
+                {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}">Newer</a>
+                {{ end }}
+              </li>
+              <li class="c-menu-pager-older">
+                {{ if .Paginator.HasNext }}
+                <a href="{{ .Paginator.Next.URL }}">Older</a>
+                {{ end }}
+              </li>
+            </ul>
           </nav>
       </div>
   </main>
