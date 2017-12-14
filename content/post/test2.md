@@ -2,8 +2,8 @@
 title = "Hugoのカスタマイズが楽しくなってきた"
 description = "既存テーマをそのまま使うつもりだったのに、テーマ作りについつい夢中になってしまった。"
 date = "2017-12-10T21:22:01+09:00"
-categories = "memo"
-tags = "Hugo"
+categories = [ "memo" ]
+tags = [ "Hugo" ]
 draft = false
 +++
 

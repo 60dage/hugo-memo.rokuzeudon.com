@@ -2,8 +2,8 @@
 title = "初めてのHugo"
 description = "Hugo + Github + Netlify をやってみた。"
 date = "2017-12-04T21:22:01+09:00"
-categories = "memo"
-tags = "Hugo"
+categories = [ "memo" ]
+tags = [ "Hugo" ]
 draft = false
 +++
 

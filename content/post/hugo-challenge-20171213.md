@@ -2,8 +2,8 @@
 title = "HugoとNetlifyの連携でつまづいてしんどかった"
 description = "ページの前後へ移動する機能を実装しようとしたら、ローカルでは問題ないのに Netlify でエラーになってしまい困った。"
 date = "2017-12-13T01:00:19+09:00"
-categories = "memo"
-tags = "Hugo"
+categories = [ "memo" ]
+tags = [ "Hugo" ]
 draft = false
 +++
 
