@@ -47,12 +47,13 @@
   .list {
     .c-body-post {
       padding: .6rem 1.4rem;
+      time {
+        font-size: 80%;
+        color: $color-txt-lighter;
+      }
     }
     .c-body-post-title {
       font-size: 1.2rem;
-    }
-    time {
-      font-size: .8rem;
     }
     .c-body-post-description {
       display: none;
