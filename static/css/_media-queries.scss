@@ -1,3 +1,18 @@
+// small display
+@media only screen and (max-width: 420px){
+  // 一覧をコンパクトに
+  .index .c-body-post {
+    padding: .6em 1.4em;
+    .c-body-post-title {
+      font-size: 1.2em;
+    }
+    .c-body-post-description {
+      display: none;
+    }
+  }
+}
+
+// large display
 @media only screen and (min-width: 420px){
   body {
     font-size: 20px;
