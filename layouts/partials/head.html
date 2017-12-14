@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   {{ with .Title | default .Site.Title }}
   <title>{{ . }}</title>
   <meta property="og:title" content="{{ . }}" />
@@ -59,9 +60,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-56512489-5');
   </script>
-
 
 </head>
