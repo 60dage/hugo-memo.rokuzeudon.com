@@ -50,46 +50,159 @@ li {
   background-color: $color-bg-light;
 }
 .c-body-container {
-  margin: 1.4rem auto;
+  margin: 1.4rem auto 0;
   max-width: 50rem;
 }
-.c-body-post .c-body-post-title {
+.c-body-post-title {
+  margin: 0;
+  line-height: 1.4;
   font-size: 2rem;
   font-weight: normal;
 }
+.c-body-post-description {
+  margin: .8rem 0 0;
+  font-size: .94rem;
+}
+
+// メニュー
+.c-menu{
+  margin: 5rem auto 0;
+  max-width: 50rem;
+  border-top: 1px solid $color-border;
+}
+.c-menu-taxonomy {
+  display: flex;
+  border-bottom: 1px solid $color-border;
+}
+.c-category-list, .c-tag-list {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  list-style: none;
+  a {
+    display: block;
+    text-decoration: none;
+    font-style: italic;
+    &:hover {
+      color: darken($color-key, 15%);
+      background: $color-bg-white;
+    }
+  }
+}
+.c-category-list {
+  a {
+    margin: 0;
+    padding: 1.6rem;
+    height: 100%;
+    font-weight: bold;
+    color: $color-key;
+  }
+}
+.c-tag-list {
+  display: inline-block;
+  padding: .8rem;
+  border-left: 1px solid $color-border;
+  a {
+    margin: 0;
+    padding: .8rem;
+    color: $color-txt-light;
+    &::before {
+      content: "#";
+      display: inline;
+    }
+  }
+}
+.c-tag-list-item {
+  display: inline-block;
+}
+.c-menu-pager {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 0;
+  li {
+    position: relative;
+    width: 8rem;
+    text-align: center;
+    list-style: none;
+    a {
+      display: block;
+      padding: .8rem 1.4rem;
+      text-decoration: none;
+      color: $color-txt-light;
+      &:hover {
+        color: darken($color-key, 15%);
+        background: $color-bg-white;
+      }
+    }
+  }
+}
+.c-menu-pager-newer, .c-menu-pager-older {
+  a::before {
+    content: "";
+    position: absolute;
+    top: 1.6rem;
+    width: .4rem;
+    height: .4rem;
+    border-top: 2px solid $color-key;
+    border-right: 2px solid $color-key;
+  }
+}
+.c-menu-pager-newer a {
+  padding: .8rem 2.4rem .8rem 1.4rem;
+  &::before {
+    right: 1rem;
+    transform: rotate(45deg);
+  }
+}
+.c-menu-pager-older a {
+  padding: .8rem 1.4rem .8rem 2.4rem;
+  &::before {
+    left: 1rem;
+    transform: rotate(-135deg);
+  }
+}
+
+// フッター
+.c-footer {
+  margin: 1.4rem auto;
+  padding: 0 1.4rem;
+  max-width: 50rem;
+  font-size: 80%;
+  text-align: center;
+  color: $color-txt-light;
+}
 
 // 記事一覧
-.index .c-body-post {
-  position: relative;
-  padding: 1.4rem 2rem;
-  line-height: 1.6;
-  &:hover {
-    background: $color-bg-white;
-  }
-  .c-body-post-title {
-    margin: 0;
-    line-height: 1.4;
-  }
-  time {
-    font-size: 80%;
-    color: $color-txt-lighter;
-  }
-  .c-body-post-description {
-    margin: .8rem 0 0;
-    font-size: .94rem;
-  }
-  .more{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    .link-style{
-      display: block;
+.list{
+  .c-body-post {
+    position: relative;
+    padding: 1.4rem 2rem;
+    line-height: 1.6;
+    &:hover {
+      background: $color-bg-white;
+    }
+    time {
+      font-size: 80%;
+      color: $color-txt-lighter;
+    }
+    .more{
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      color: transparent;
+      .link-style{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+      }
     }
+  }
+  .c-menu {
+    margin: 1.4rem;
   }
 }
 .p-list-title {
@@ -100,8 +213,10 @@ li {
 }
 
 // 記事詳細
-.single .c-body-post {
-  padding: 0 2rem;
+.single {
+  .c-body-post {
+    padding: 0 2rem;
+  }
   .c-body-post-title {
     margin: 0;
   }
@@ -131,117 +246,4 @@ li {
       letter-spacing: normal;
     }
   }
-}
-
-// メニュー
-.c-menu{
-  margin: 5rem auto 0;
-  max-width: 50rem;
-  border-top: 1px solid $color-border;
-}
-.c-menu-taxonomy {
-  display: flex;
-  border-bottom: 1px solid $color-border;
-  ul {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    list-style: none;
-  }
-  .c-category-list, .c-tag-list {
-    a {
-      display: block;
-      margin: .8rem 0 .8rem .8rem;
-      padding: .8rem 1.4rem;
-      text-decoration: none;
-      font-style: italic;
-      color: $color-txt-light;
-      &:hover {
-        color: darken($color-key, 15%);
-        background: $color-bg-white;
-      }
-    }
-  }
-  .c-category-list {
-    a {
-      display: block;
-      margin: 0;
-      padding: 1.6rem;
-      height: 100%;
-      font-weight: bold;
-      color: $color-key;
-    }
-  }
-  .c-tag-list {
-    display: inline-block;
-    padding: .8rem;
-    border-left: 1px solid $color-border;
-  }
-  .c-tag-list-item {
-    display: inline-block;
-    a {
-      margin: 0;
-    }
-    a::before {
-      content: "#";
-      display: inline;
-    }
-  }
-}
-.c-menu-pager {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  padding: 0;
-  li {
-    position: relative;
-    width: 8rem;
-    text-align: center;
-    list-style: none;
-    a {
-      display: block;
-      padding: .8rem 1.4rem;
-      text-decoration: none;
-      color: $color-txt-light;
-      &:hover {
-        color: darken($color-key, 15%);
-        background: $color-bg-white;
-      }
-    }
-  }
-  .c-menu-pager-newer a, .c-menu-pager-older a {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 1.45rem;
-      width: .4rem;
-      height: .4rem;
-      border-top: 2px solid $color-key;
-      border-right: 2px solid $color-key;
-    }
-  }
-  .c-menu-pager-newer a {
-    padding: .8rem 2.4rem .8rem 1.4rem;
-    &::before {
-      right: 1rem;
-      transform: rotate(45deg);
-    }
-  }
-  .c-menu-pager-older a {
-    padding: .8rem 1.4rem .8rem 2.4rem;
-    &::before {
-      left: 1rem;
-      transform: rotate(-135deg);
-    }
-  }
-}
-
-// フッター
-.c-footer {
-  margin: 1.4rem auto;
-  padding: 0 1.4rem;
-  max-width: 50rem;
-  font-size: 80%;
-  text-align: center;
-  color: $color-txt-light;
 }
