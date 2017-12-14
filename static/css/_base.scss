@@ -212,6 +212,15 @@ li {
   border-bottom: 1px solid;
 }
 
+// カテゴリ・タグ一覧
+.terms{
+  .c-body-post {
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
 // 記事詳細
 .single {
   .c-body-post {
