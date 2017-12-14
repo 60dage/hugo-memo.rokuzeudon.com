@@ -243,6 +243,8 @@ li {
     img {
       max-width:100%;
       height:auto;
+      border: 1px solid $color-border-light;
+      box-sizing: border-box;
     }
     code {
       font-size: 80%;
