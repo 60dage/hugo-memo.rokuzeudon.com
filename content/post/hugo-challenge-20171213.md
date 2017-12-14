@@ -1,10 +1,11 @@
----
-title: "HugoとNetlifyの連携でつまづいてしんどかった"
-date: 2017-12-13T01:00:19+09:00
-description: ページの前後へ移動する機能を実装しようとしたら、ローカルでは問題ないのに Netlify でエラーになってしまい困った。
-categories: "日記"
-tags: "Hugo"
----
++++
+title = "HugoとNetlifyの連携でつまづいてしんどかった"
+description = "ページの前後へ移動する機能を実装しようとしたら、ローカルでは問題ないのに Netlify でエラーになってしまい困った。"
+date = "2017-12-13T01:00:19+09:00"
+categories = "memo"
+tags = "Hugo"
+draft = false
++++
 
 CSSやHTMLの記述を整理したり、全体的に幅や文字サイズを大きくしたりと少しづつ手を加えている。
 

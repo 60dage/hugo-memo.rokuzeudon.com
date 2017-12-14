@@ -1,8 +1,11 @@
----
-title: "初めてのHugo"
-date: 2017-12-04T21:22:01+09:00
-description: Hugo + Github + Netlify をやってみた。
----
++++
+title = "初めてのHugo"
+description = "Hugo + Github + Netlify をやってみた。"
+date = "2017-12-04T21:22:01+09:00"
+categories = "memo"
+tags = "Hugo"
+draft = false
++++
 
 これで本当に更新できるのかどうか、おそるおそる書いている。
 [WordBench京都で聞いた▲さんの発表](https://blog.mismithportfolio.com/web/wbkyoto201711)の通り、 Hugo + Github + Netlify を試している。つまずくことなく導入できてびっくりした。参考にさせていただいた記事の皆様に感謝。
