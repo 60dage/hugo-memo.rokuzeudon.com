@@ -1,6 +1,38 @@
-<article class="c-body-post">
-  <h2 class="c-body-post-title">{{ .Title }}</h2>
-  <p class="c-body-post-description">{{ .Description | markdownify }}</p>
-  <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
-  <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
-</article>
+{{ partial "head" . }}
+<body class="index">
+  <header class="c-header">
+    <p class="c-header-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
+    <p class="c-header-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  </header>
+  <main class="c-body">
+    <div class="c-body-container">
+      <h1 class="p-list-title">{{ .Title }}</h1>
+      {{ range (.Paginator 10).Pages }}
+      <article class="c-body-post">
+        <h2 class="c-body-post-title">{{ .Title }}</h2>
+        <p class="c-body-post-description">{{ .Description | markdownify }}</p>
+        <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+        <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
+      </article>
+      {{ end }}
+    </div>
+    <nav class="c-menu">
+      <ul class="c-menu-pager">
+        <li class="c-menu-pager-newer">
+          {{ if .Prev }}
+          <a href="{{ .Prev.Permalink }}">Newer</a>
+          {{ else }}
+          {{ end }}
+        </li>
+        <li class="c-menu-pager-home"><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li class="c-menu-pager-older">
+          {{ if .Next }}
+          <a href="{{ .Next.Permalink }}">Older</a>
+          {{ else }}
+          {{ end }}
+        </li>
+      </ul>
+    </nav>
+  </main>
+  {{ partial "footer" . }}
+</body>

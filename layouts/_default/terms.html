@@ -1,0 +1,20 @@
+{{ partial "head" . }}
+{{ $baseurl := .Site.BaseURL}}
+<body class="single">
+  <header class="c-header">
+    <p class="c-header-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
+    <p class="c-header-subtitle">by <a href="https://twitter.com/rokuzeudon">@rokuzeudon</a></p>
+  </header>
+  <main class="c-body">
+    <div class="c-body-container">
+      <article class="c-body-post">
+        <h1 class="c-body-post-title">{{ .Title }}</h1>
+        {{ $data := .Data }}
+        {{ range $key, $value := .Data.Terms }}
+        <li><a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
+        {{ end }}
+      </article>
+    </div>
+  </main>
+  {{ partial "footer" . }}
+</body>

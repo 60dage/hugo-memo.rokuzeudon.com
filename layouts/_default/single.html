@@ -1,4 +1,5 @@
 {{ partial "head" . }}
+{{ $baseurl := .Site.BaseURL}}
 <body class="single">
   <header class="c-header">
     <p class="c-header-title"><a class="link-style" href="{{ .Site.BaseURL }}">6z</a></p>
@@ -7,28 +8,46 @@
   <main class="c-body">
     <div class="c-body-container">
       <article class="c-body-post">
-        <h1 class="c-body-post-title">{{ .Title }}</h1>
-        <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
-        {{ .Content }}
+        <header>
+          <h1 class="c-body-post-title">{{ .Title }}</h1>
+          <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+        </header>
+        <section class="entry">
+          {{ .Content }}
+        </section>
+        <footer>
+          <nav class="c-menu">
+            <div class="c-menu-taxonomy">
+              {{ range .Params.categories }}
+              <ul class="c-category-list">
+                <li class="c-category-list-item"><a href="{{ $baseurl }}categories/{{ . | urlize }}" class="c-category-link">{{ . }}</a></li>
+              </ul>
+              {{ end }}
+              {{ range .Params.tags }}
+              <ul class="c-tag-list">
+                <li class="c-tag-list-item"><a href="{{ $baseurl }}tags/{{ . | urlize }}" class="c-tag-link">{{ . }}</a></li>
+              </ul>
+              {{ end }}
+            </div>
+            <ul class="c-menu-pager">
+              <li class="c-menu-pager-newer">
+                {{ if .Prev }}
+                <a href="{{ .Prev.Permalink }}">Newer</a>
+                {{ else }}
+                {{ end }}
+              </li>
+              <li class="c-menu-pager-home"><a href="{{ .Site.BaseURL }}">Home</a></li>
+              <li class="c-menu-pager-older">
+                {{ if .Next }}
+                <a href="{{ .Next.Permalink }}">Older</a>
+                {{ else }}
+                {{ end }}
+              </li>
+            </ul>
+          </nav>
+        </footer>
       </article>
     </div>
-    <nav class="c-menu">
-      <ul class="c-menu-pager">
-        <li class="c-menu-pager-newer">
-          {{ if .Prev }}
-          <a href="{{ .Prev.Permalink }}">Newer</a>
-          {{ else }}
-          {{ end }}
-        </li>
-        <li class="c-menu-pager-home"><a href="{{ .Site.BaseURL }}">Home</a></li>
-        <li class="c-menu-pager-older">
-          {{ if .Next }}
-          <a href="{{ .Next.Permalink }}">Older</a>
-          {{ else }}
-          {{ end }}
-        </li>
-      </ul>
-    </nav>
   </main>
   {{ partial "footer" . }}
 </body>

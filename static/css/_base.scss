@@ -13,7 +13,7 @@ body {
   font-size: 18px;
   color: $color-txt;
   line-height: 2.2;
-  letter-spacing: .08em;
+  letter-spacing: .08rem;
 }
 li {
   line-height: 1.8;
@@ -21,17 +21,17 @@ li {
 
 // ヘッダー
 .c-header {
-  margin: 1.4em auto;
+  margin: 1.4rem auto;
   max-width: 50rem;
   background-color: $color-bg-white;
 }
 .c-header-title {
   display: inline-block;
-  margin: 0 0.3em 0 0;
-  padding: 0 0 0 1.4rem;
+  margin: 0 1rem 0 0;
+  padding: 0 0 0 2rem;
   line-height: 1.4;
   font-family: alana, sans-serif;
-  font-size: 4em;
+  font-size: 4rem;
   a {
   color: $color-key;
   text-decoration: none;
@@ -46,22 +46,22 @@ li {
 
 // コンテンツ
 .c-body {
-  padding: 1.4em 0;
+  padding: 1.4rem 0;
   background-color: $color-bg-light;
 }
 .c-body-container {
-  margin: 1.4em auto;
+  margin: 1.4rem auto;
   max-width: 50rem;
 }
 .c-body-post .c-body-post-title {
-  font-size: 1.6em;
+  font-size: 2rem;
   font-weight: normal;
 }
 
 // 記事一覧
 .index .c-body-post {
   position: relative;
-  padding: 1.4em;
+  padding: 1.4rem 2rem;
   line-height: 1.6;
   &:hover {
     background: $color-bg-white;
@@ -75,8 +75,8 @@ li {
     color: $color-txt-lighter;
   }
   .c-body-post-description {
-    margin: .8em 0 0;
-    font-size: 90%;
+    margin: .8rem 0 0;
+    font-size: .94rem;
   }
   .more{
     position: absolute;
@@ -92,56 +92,115 @@ li {
     }
   }
 }
+.p-list-title {
+  margin: 2rem;
+  font-size: 1.4rem;
+  font-weight: normal;
+  border-bottom: 1px solid;
+}
 
 // 記事詳細
 .single .c-body-post {
-  padding: 0 1.4em;
-  h1 {
-    line-height: 1.4;
+  padding: 0 2rem;
+  .c-body-post-title {
+    margin: 0;
   }
   time {
     font-size: 80%;
     color: $color-txt-lighter;
   }
-  ul {
-    padding: 0 0 0 1.4em;
-  }
-  img {
-    max-width:100%;
-    height:auto;
-  }
-  code {
-    font-size: 80%;
-    margin: 0 .4em;
-    padding: 0 .4em;
-    border: 1px solid $color-border;
-    background: $color-bg-gray;
-    border-radius: 3px;
-    font-family: Monaco,Consolas,Courier New,Courier,monospace,sans-serif;
-    letter-spacing: normal;
+  .entry {
+    h1 {
+      line-height: 1.4;
+    }
+    ul {
+      padding: 0 0 0 1.4rem;
+    }
+    img {
+      max-width:100%;
+      height:auto;
+    }
+    code {
+      font-size: 80%;
+      margin: 0 .4rem;
+      padding: 0 .4rem;
+      border: 1px solid $color-border;
+      background: $color-bg-gray;
+      border-radius: 3px;
+      font-family: Monaco,Consolas,Courier New,Courier,monospace,sans-serif;
+      letter-spacing: normal;
+    }
   }
 }
 
 // メニュー
 .c-menu{
-  margin: 5em auto 0;
+  margin: 5rem auto 0;
   max-width: 50rem;
+  border-top: 1px solid $color-border;
+}
+.c-menu-taxonomy {
+  display: flex;
+  border-bottom: 1px solid $color-border;
+  ul {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    list-style: none;
+  }
+  .c-category-list, .c-tag-list {
+    a {
+      display: block;
+      margin: .8rem 0 .8rem .8rem;
+      padding: .8rem 1.4rem;
+      text-decoration: none;
+      font-style: italic;
+      color: $color-txt-light;
+      &:hover {
+        color: darken($color-key, 15%);
+        background: $color-bg-white;
+      }
+    }
+  }
+  .c-category-list {
+    a {
+      display: block;
+      margin: 0;
+      padding: 1.6rem;
+      height: 100%;
+      font-weight: bold;
+      color: $color-key;
+    }
+  }
+  .c-tag-list {
+    display: inline-block;
+    padding: .8rem;
+    border-left: 1px solid $color-border;
+  }
+  .c-tag-list-item {
+    display: inline-block;
+    a {
+      margin: 0;
+    }
+    a::before {
+      content: "#";
+      display: inline;
+    }
+  }
 }
 .c-menu-pager {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   padding: 0;
-  border-top: 1px solid $color-border;
-  border-bottom: 1px solid $color-border;
   li {
     position: relative;
-    width: 8em;
+    width: 8rem;
     text-align: center;
     list-style: none;
     a {
       display: block;
-      padding: .8em 1.4em;
+      padding: .8rem 1.4rem;
       text-decoration: none;
       color: $color-txt-light;
       &:hover {
@@ -154,24 +213,24 @@ li {
     &::before {
       content: "";
       position: absolute;
-      top: 1.45em;
-      width: .4em;
-      height: .4em;
+      top: 1.45rem;
+      width: .4rem;
+      height: .4rem;
       border-top: 2px solid $color-key;
       border-right: 2px solid $color-key;
     }
   }
   .c-menu-pager-newer a {
-    padding: .8em 2.4em .8em 1.4em;
+    padding: .8rem 2.4rem .8rem 1.4rem;
     &::before {
-      right: 1em;
+      right: 1rem;
       transform: rotate(45deg);
     }
   }
   .c-menu-pager-older a {
-    padding: .8em 1.4em .8em 2.4em;
+    padding: .8rem 1.4rem .8rem 2.4rem;
     &::before {
-      left: 1em;
+      left: 1rem;
       transform: rotate(-135deg);
     }
   }
@@ -179,8 +238,8 @@ li {
 
 // フッター
 .c-footer {
-  margin: 1.4em auto;
-  padding: 0 1.4em;
+  margin: 1.4rem auto;
+  padding: 0 1.4rem;
   max-width: 50rem;
   font-size: 80%;
   text-align: center;
