@@ -1,0 +1,6 @@
+<article class="c-body-post">
+    <h2 class="c-body-post-title">{{ .Title }}</h2>
+    <p class="c-body-post-description">{{ .Description | markdownify }}</p>
+    <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+    <p class="more"><a class="link-style" href="{{ .Permalink }}">続きを読む</a></p>
+</article>
