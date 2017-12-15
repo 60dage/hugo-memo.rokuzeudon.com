@@ -18,8 +18,8 @@ draft = false
 
 一応、カテゴリー・タグをリスト表示するページもある。まだ１つずつしかないので寂しい。
 
-- [Categories](/tags)
-- [Tags](/categories)
+- [Categories](/categories)
+- [Tags](/tags)
 
 実装内容は[Githubのログ](https://github.com/rokuzeudon/6z-Hugo/commit/04267d2da1ef3c7fea0636827beda30b8d665a49)を見てほしい。
 何につまづいたかというと `{{ $baseurl := .Site.BaseURL}}` の有無だ。これが該当ファイルで抜けてるとNGな理由は、まだよくわかってない…。
