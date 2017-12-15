@@ -67,7 +67,7 @@ li {
 // メニュー
 .c-menu{
   margin: 5rem auto 0;
-  max-width: 50rem;
+  max-width: 46rem;
   border-top: 1px solid $color-border;
 }
 .c-menu-taxonomy {
@@ -177,7 +177,7 @@ li {
 .list{
   .c-body-post {
     position: relative;
-    padding: 1.4rem 2rem;
+    padding: 2rem;
     line-height: 1.6;
     &:hover {
       background: $color-bg-white;
@@ -202,7 +202,10 @@ li {
     }
   }
   .c-menu {
-    margin: 2.8rem 1.4rem;
+    margin: 2.8rem auto;
+  }
+  .c-menu-pager {
+    justify-content: center;
   }
 }
 .p-list-title {
@@ -225,6 +228,9 @@ li {
 .single {
   .c-body-post {
     padding: 0 2rem;
+    header {
+      margin: 3rem 0;
+    }
   }
   .c-body-post-title {
     margin: 0;
