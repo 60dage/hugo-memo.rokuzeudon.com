@@ -7,10 +7,12 @@
 }
 
 // ベース
+html {
+  font-size: 17px;
+}
 body {
   font-family: ten-mincho, serif;
   font-feature-settings: "palt";
-  font-size: 18px;
   color: $color-txt;
   line-height: 2.2;
   letter-spacing: .08rem;
@@ -22,7 +24,7 @@ li {
 // ヘッダー
 .c-header {
   margin: 1.4rem auto;
-  max-width: 50rem;
+  max-width: 42rem;
   background-color: $color-bg-white;
 }
 .c-header-title {
@@ -51,23 +53,23 @@ li {
 }
 .c-body-container {
   margin: 1.4rem auto 0;
-  max-width: 50rem;
+  max-width: 42rem;
 }
 .c-body-post-title {
   margin: 0;
-  line-height: 1.4;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 .c-body-post-description {
   margin: .8rem 0 0;
-  font-size: .94rem;
+  font-size: .86rem;
+  color: $color-txt-light;
 }
 
 // メニュー
 .c-menu{
   margin: 5rem auto 0;
-  max-width: 46rem;
+  max-width: 38rem;
   border-top: 1px solid $color-border;
 }
 .c-menu-taxonomy {
@@ -77,7 +79,7 @@ li {
 .c-category-list, .c-tag-list {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: .8rem;
   list-style: none;
   a {
     display: block;
@@ -167,7 +169,7 @@ li {
 .c-footer {
   margin: 1.4rem auto;
   padding: 0 1.4rem;
-  max-width: 50rem;
+  max-width: 42rem;
   font-size: 80%;
   text-align: center;
   color: $color-txt-light;
@@ -209,9 +211,8 @@ li {
   }
 }
 .p-list-title {
-  margin: 2rem;
-  font-size: 1.4rem;
-  font-weight: normal;
+  margin: 0 2rem .8rem;
+  font-size: 1rem;
   border-bottom: 1px solid;
 }
 
