@@ -262,5 +262,8 @@ li {
       font-family: Monaco,Consolas,Courier New,Courier,monospace,sans-serif;
       letter-spacing: normal;
     }
+    strong {
+      background: linear-gradient(transparent 87%,rgba(243,103,119,.5) 30%)
+    }
   }
 }
