@@ -78,11 +78,12 @@ li {
 }
 .c-category-list, .c-tag-list {
   margin: 0;
-  padding: 0;
+  padding: .8rem;
   font-size: .8rem;
   list-style: none;
   a {
     display: block;
+    padding: .8rem;
     text-decoration: none;
     font-style: italic;
     &:hover {
@@ -93,16 +94,12 @@ li {
 }
 .c-category-list {
   a {
-    margin: 0;
-    padding: 1.6rem;
-    height: 100%;
     font-weight: bold;
     color: $color-key;
   }
 }
 .c-tag-list {
   display: inline-block;
-  padding: .8rem;
   border-left: 1px solid $color-border;
   a {
     margin: 0;
@@ -249,9 +246,11 @@ li {
     }
     img {
       max-width:100%;
+      margin: .8rem 0;
       height:auto;
       border: 1px solid $color-border-light;
       box-sizing: border-box;
+      vertical-align: bottom;
     }
     code {
       font-size: 80%;

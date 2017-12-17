@@ -13,11 +13,9 @@
   .c-menu-taxonomy {
     flex-flow: column;
     .c-category-list {
+      padding: 0;
       text-align: center;
       border-bottom: 1px solid $color-border;
-      a {
-        padding: .8rem;
-      }
     }
     .c-tag-list {
       padding: 0;
@@ -61,6 +59,16 @@
   .single {
     .c-body-post{
       padding: 0 1.4rem;
+    }
+  }
+}
+@media only screen and (min-width: 421px){
+  .single {
+    .entry {
+      p, ul, ol, blockquote, img {
+        margin: 0 0 2rem;
+        letter-spacing: .1em;
+      }
     }
   }
 }
