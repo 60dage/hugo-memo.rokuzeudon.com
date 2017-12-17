@@ -16,6 +16,7 @@ body {
   color: $color-txt;
   line-height: 2.2;
   letter-spacing: .08rem;
+  word-break: break-word;
 }
 li {
   line-height: 1.8;
@@ -183,7 +184,7 @@ li {
       background: $color-bg-white;
     }
     time {
-      font-size: 80%;
+      font-size: .8rem;
       color: $color-txt-lighter;
     }
     .more{

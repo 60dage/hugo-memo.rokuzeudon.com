@@ -3,24 +3,18 @@
   .c-header-title {
     padding: 0 0 0 1.4rem;
   }
-  .p-list-title {
-    margin: 1.4rem;
-  }
-  .c-body-post-title {
-    font-size: 1.6rem;
-    line-height: 1.6;
-  }
+  // メニュー
   .c-menu-taxonomy {
     flex-flow: column;
-    .c-category-list {
-      padding: 0;
-      text-align: center;
-      border-bottom: 1px solid $color-border;
-    }
-    .c-tag-list {
-      padding: 0;
-      border: none;
-    }
+  }
+  .c-category-list {
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid $color-border;
+  }
+  .c-tag-list {
+    padding: 0;
+    border: none;
   }
   .c-menu-pager {
     li {
@@ -29,25 +23,23 @@
         padding: .8rem .4rem;
       }
     }
-    .c-menu-pager-newer a {
-      padding: .8rem 1.4rem .8rem .4rem;
-      &::before {
-        right: .8rem;
-      }
-    }
-    .c-menu-pager-older a {
-      padding: .8rem .4rem .8rem 1.4rem;
-      &::before {
-        left: .8rem;
-      }
+  }
+  .c-menu-pager-newer a {
+    padding: .8rem 1.4rem .8rem .4rem;
+    &::before {
+      right: .8rem;
     }
   }
+  .c-menu-pager-older a {
+    padding: .8rem .4rem .8rem 1.4rem;
+    &::before {
+      left: .8rem;
+    }
+  }
+  // 記事一覧
   .list {
     .c-body-post {
       padding: 1rem 1.4rem;
-      time {
-        font-size: .8rem;
-      }
     }
     .c-body-post-title {
       font-size: 1.2rem;
@@ -56,6 +48,10 @@
       display: none;
     }
   }
+  .p-list-title {
+    margin: 1.4rem;
+  }
+  // 記事詳細
   .single {
     .c-body-post{
       padding: 0 1.4rem;
@@ -64,6 +60,7 @@
 }
 @media only screen and (min-width: 421px){
   .single {
+    // PCだと文章が詰まって見えるのでゆったりさせる
     .entry {
       p, ul, ol, blockquote, img {
         margin: 0 0 2rem;
