@@ -182,6 +182,9 @@ li {
     line-height: 1.6;
     &:hover {
       background: $color-bg-white;
+      .c-body-post-title {
+        color: $color-key;
+      }
     }
     time {
       font-size: .8rem;
