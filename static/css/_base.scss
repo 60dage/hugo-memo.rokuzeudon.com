@@ -209,9 +209,6 @@ li {
         left: 100%;
       }
     }
-    &:active {
-      filter: blur(2em);
-    }
     time {
       font-size: .8rem;
       color: $color-txt-lighter;
