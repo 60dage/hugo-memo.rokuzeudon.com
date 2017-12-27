@@ -35,11 +35,17 @@ li {
   line-height: 1.4;
   font-family: alana, sans-serif;
   font-size: 4rem;
+  animation: body-blur $ease-slower;
   a {
   color: $color-key;
   text-decoration: none;
+  filter: blur(0);
+  transition: $ease-out-slow;
     &:hover {
-      color: darken($color-key, 15%);
+      filter: blur(.1em);
+    }
+    &:active {
+      filter: blur(.5em);
     }
   }
 }
@@ -178,13 +184,34 @@ li {
 .list{
   .c-body-post {
     position: relative;
+    overflow: hidden;
     padding: 2rem;
     line-height: 1.6;
-    &:hover {
+    transition: $ease-out-slow;
+    &::before{
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
       background: $color-bg-white;
+      transition: $ease-out-slow;
+    }
+    .c-body-post-title {
+      transition: $ease-out-slow;
+    }
+    &:hover {
       .c-body-post-title {
         color: $color-key;
       }
+      &::before {
+        left: 100%;
+      }
+    }
+    &:active {
+      filter: blur(2em);
     }
     time {
       font-size: .8rem;
@@ -229,8 +256,12 @@ li {
 
 // 記事詳細
 .single {
+  .c-header-title {
+    animation: none;
+  }
   .c-body-post {
     padding: 0 2rem;
+    animation: body-blur $ease-slower;
     header {
       margin: 3rem 0;
     }
@@ -270,5 +301,18 @@ li {
     strong {
       background: linear-gradient(transparent 87%,rgba(243,103,119,.5) 30%)
     }
+  }
+}
+
+@keyframes body-blur {
+  0% {
+    position: relative;
+    top: -1em;
+    filter: blur(1em)
+  }
+  100% {
+    position: relative;
+    top: 0;
+    filter: blur(0)
   }
 }
