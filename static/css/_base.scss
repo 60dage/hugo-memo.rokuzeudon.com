@@ -35,7 +35,6 @@ li {
   line-height: 1.4;
   font-family: alana, sans-serif;
   font-size: 4rem;
-  animation: body-blur $ease-slower;
   a {
   color: $color-key;
   text-decoration: none;
@@ -261,7 +260,6 @@ li {
   }
   .c-body-post {
     padding: 0 2rem;
-    animation: body-blur $ease-slower;
     header {
       margin: 3rem 0;
     }
@@ -301,18 +299,5 @@ li {
     strong {
       background: linear-gradient(transparent 87%,rgba(243,103,119,.5) 30%)
     }
-  }
-}
-
-@keyframes body-blur {
-  0% {
-    position: relative;
-    top: -1em;
-    filter: blur(1em)
-  }
-  100% {
-    position: relative;
-    top: 0;
-    filter: blur(0)
   }
 }
