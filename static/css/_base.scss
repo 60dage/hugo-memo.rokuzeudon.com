@@ -301,6 +301,24 @@ li {
       box-sizing: border-box;
       vertical-align: bottom;
     }
+    blockquote {
+      position: relative;
+      margin: 0;
+      padding: 1em;
+      background: $color-bg-gray;
+      &::before{
+        content: "“";
+        display: block;
+        position: absolute;
+        top: -.8em;
+        left: -.2em;
+        font-size: 4em;
+        opacity: .2;
+      }
+      p:last-child {
+        margin: 0;
+      }
+    }
     code {
       font-size: 80%;
       margin: 0 .4rem;
@@ -310,6 +328,20 @@ li {
       border-radius: 3px;
       font-family: Monaco,Consolas,Courier New,Courier,monospace,sans-serif;
       letter-spacing: normal;
+      white-space: pre;
+    }
+    pre {
+      overflow-y: hidden;
+      padding: 1rem;
+      background-color: $color-bg-gray;
+      border: 1px solid $color-border;
+      white-space: pre;
+      line-height: 1.6;
+      code {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
     }
     strong {
       background: linear-gradient(transparent 87%,rgba(243,103,119,.5) 30%)
