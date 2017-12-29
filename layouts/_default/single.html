@@ -23,11 +23,11 @@
                 <li class="c-category-list-item"><a href="{{ $baseurl }}categories/{{ . | urlize }}" class="c-category-link">{{ . }}</a></li>
               </ul>
               {{ end }}
-              {{ range .Params.tags }}
               <ul class="c-tag-list">
+                {{ range .Params.tags }}
                 <li class="c-tag-list-item"><a href="{{ $baseurl }}tags/{{ . | urlize }}" class="c-tag-link">{{ . }}</a></li>
+                {{ end }}
               </ul>
-              {{ end }}
             </div>
             <ul class="c-menu-pager">
               <li class="c-menu-pager-newer">
