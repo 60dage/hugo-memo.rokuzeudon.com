@@ -1,7 +1,7 @@
 +++
 title = "KUSANAGI で SSL ( Let's Encrypt ) が切れていたので更新した"
 description = "KUSANAGI を使っている場合、SSLは自動で更新されると思っていたがされないケースがあるようだ。"
-date = "2017-12-13T01:00:19+09:00"
+date = "2018-01-06T01:00:19+09:00"
 categories = [ "memo" ]
 tags = [ "KUSANAGI", "WordPress" ]
 draft = false
