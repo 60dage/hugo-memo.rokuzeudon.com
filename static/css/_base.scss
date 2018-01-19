@@ -187,20 +187,6 @@ li {
     padding: 2rem;
     line-height: 1.6;
     transition: $ease-out-slow;
-    &::before {
-      content: "read more ...";
-      position: absolute;
-      display: block;
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      padding: .2em 1em;
-      font-size: .9em;
-      color: #fff;
-      background: $color-key;
-      opacity: 0;
-      transition: $ease-out-slower;
-    }
     &::after{
       content: "";
       position: absolute;
@@ -218,10 +204,6 @@ li {
     &:hover {
       .c-body-post-title {
         color: $color-key;
-      }
-      &::before {
-        right: -86%;
-        opacity: .6;
       }
       &::after {
         left: 100%;
