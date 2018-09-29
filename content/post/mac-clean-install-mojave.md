@@ -1,5 +1,5 @@
 +++
-title = "MojaveをインストールしたMacをクリーンインストールした時のメモ"
+title = "MojaveにアップデートしたMacをクリーンインストールした時のメモ"
 description = "PCが起動しなくなって焦った…。"
 date = "2018-09-29T01:00:19+09:00"
 categories = [ "memo" ]
